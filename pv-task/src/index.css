@@ -1,3 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn-blue {
+    @apply bg-blue-800 px-4 py-2 rounded-lg text-white;
+  }
+
+  .btn-white {
+    @apply bg-white px-4 py-2 rounded-lg text-gray-400;
+  }
+
+  .btn-active {
+    @apply text-red-600;
+  }
+
+  .btn-inactive {
+    @apply text-green-600;
+  }
+
+  .btn-edit {
+    @apply text-black;
+  }
+
+  .btn-delete {
+    @apply text-red-600 ml-4;
+  }
+
+  .search-input-header {
+    @apply rounded-3xl bg-sky-700;
+  }
+
+  .search-img-header {
+    @apply w-8 h-8 ml-[-38px] bg-transparent;
+  }
+
+  .search-input-main {
+    @apply rounded-lg bg-white h-8;
+  }
+
+  .search-img-main {
+    @apply w-7 h-7 ml-[-38px] mt-1 bg-transparent;
+  }
+
+  .mini-image {
+    @apply w-12 h-12 rounded-full border-white border-2;
+  }
+
+  .product-type {
+    @apply text-gray-400;
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+
+  td:first-child {
+    border-left-style: solid;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  td:last-child {
+    border-right-style: solid;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  td {
+    text-align: center;
+  }
+
+}
