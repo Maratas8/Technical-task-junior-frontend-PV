@@ -79,11 +79,11 @@ const Table = ({ className }) => {
     <table className={className}>
       <thead>
         <tr>
-          <th>IMAGES</th>
-          <th>PRODUCT NAME</th>
-          <th>STOCK</th>
-          <th>STATUS</th>
-          <th>ACTIONS</th>
+          <th className="lg:text-lg md:text-md text-xs">IMAGES</th>
+          <th className="lg:text-lg md:text-md text-xs">PRODUCT NAME</th>
+          <th className="lg:text-lg md:text-md text-xs">STOCK</th>
+          <th className="lg:text-lg md:text-md text-xs">STATUS</th>
+          <th className="lg:text-lg md:text-md text-xs">ACTIONS</th>
         </tr>
       </thead>
       <tbody>
@@ -93,7 +93,7 @@ const Table = ({ className }) => {
               className="bg-white"
               key={Math.floor(Math.random() * 9999)}
               images={
-                <div className="flex justify-center my-2">
+                <div className="flex justify-center xl:my-2">
                   <img className="mini-image" src={getRandomPicture()} alt="alt" />
                   <img className="mini-image ml-[-20px]" src={getRandomPicture()} alt="alt" />
                   <img className="mini-image ml-[-20px]" src={getRandomPicture()} alt="alt" />
@@ -101,17 +101,17 @@ const Table = ({ className }) => {
               }
               name={product.name}
               type={product.type}
-              typeClassName={"product-type"}
+              typeClassName={"product-type lg:text-lg md:text-md text-xs"}
               stock={product.stock}
               status={
                 product.status === "active" ?
-                  <div><Button text="Active" className="btn-active" children={<img src={redTick} alt="red-tick" className="w-6 inline-flex" />} /></div> :
-                  <div><Button text="Inactive" className="btn-inactive" children={<img src={greenTick} alt="green-tick" className="w-6 inline-flex" />} /></div>
+                  <div><Button text="Active" className="btn-active " children={<img src={redTick} alt="red-tick" className="w-4 lg:w-6 inline-flex" />} /></div> :
+                  <div><Button text="Inactive" className="btn-inactive " children={<img src={greenTick} alt="green-tick" className="w-4 lg:w-6 inline-flex" />} /></div>
               }
               actions={
                 <div>
-                  <Button text="Edit" className="btn-edit" children={<img src={edit} alt="edit" className="w-6 inline-flex" />} />
-                  <Button text="Delete" className="btn-delete" children={<img src={delet} alt="delete" className="w-6 inline-flex" />} />
+                  <Button text="Edit" className="btn-edit" children={<img src={edit} alt="edit" className="w-4 lg:w-6 inline-flex" />} />
+                  <Button text="Delete" className="btn-delete" children={<img src={delet} alt="delete" className="w-4 lg:w-6 inline-flex" />} />
                 </div>}
             />
           );
