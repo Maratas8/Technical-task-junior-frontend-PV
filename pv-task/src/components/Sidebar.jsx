@@ -6,7 +6,7 @@ import house from "./../images/house.png";
 import cube from "./../images/cube.png";
 import diagram from "./../images/diagram.png";
 
-function SideBar() {
+function Sidebar() {
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -64,4 +64,4 @@ function SideBar() {
   );
 }
 
-export default SideBar;
+export default Sidebar;
